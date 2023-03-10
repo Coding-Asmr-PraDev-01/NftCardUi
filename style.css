@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+.container {
+  margin: 2rem;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --dark-color: #000000;
+  --dark-color-2: #141615;
+  --color-primary: #ccff00;
+  --color-gradient-primary: #e5ff87;
+  --color-gradient-secondary: #3fff00 ;
+  --faint-color: rgba(255, 255, 255, 0.6);
+}
+
+body{
+    background-color: var(--dark-color);
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.nftCardContainer{
+    background: var(--dark-color-2);
+    padding: 1.4rem;
+    border-radius: 1.6rem;
+    display: grid;
+    max-width: 1100px;
+    grid-template-columns: 300px 1fr;
+    grid-gap: 2rem;
+}
+
+.btn-outline{
+    text-decoration: none;
+    color: var(--color-gradient-secondary);
+    padding: 0.7rem 1.3rem;
+    border: 2px solid var(--color-gradient-secondary);
+    border-radius: 2rem;
+}
+
+.btn-outline:hover{
+  background: var(--color-gradient-secondary);
+  color: #000;
+}
+
+.headingSmall{
+  font-size: 8px;
+  font-weight: 500;
+  margin-left: 0.5rem;
+  transform: skewX(-25deg);
+}
+
+.headingLarge{
+  font-size: 15px;
+  transform: skewX(-25deg);
+  color: var(--color-primary);
+}
+
+.textFaint{
+  font-size: 7px;
+}
+
+.userImgBx {
+  position: relative;
+  height: 330px;
+  background: var(--dark-color-2);
+  border: 12px solid var(--dark-color);
+  overflow: hidden;
+  border-radius: 0.3rem;
+}
+
+.userImgBx img{
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.timeBx {
+  position: absolute;
+  top: 0;
+  right: -0.7rem;
+  color: #fff;
+  background-color: var(--dark-color);
+  padding: 0.5rem 1rem;
+  transform: skewX(26deg);
+  border-bottom-left-radius: 0.5rem;
+}
+
+.timeBx p {
+  transform: skewX(-26deg);
+}
+
+.currentBidBx span{
+    display: inline-block;
+    transform: skewX(-25deg);
+}
+
+.currentBidBx div{
+    display: flex;
+    align-items: flex-end;
+    gap: 0.2rem;
+}
+
+.userName {
+  position: absolute;
+  top: -50%;
+  left: 0%;
+  color: #fff;
+  transform: translateY(50%) rotate(-90deg);
+  transform-origin: 0 0;
+}
+
+.userName p{
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.userName {
+  color: #fff;
+  position: absolute;
+  top: 20%;
+  left: 1.7rem;
+  background: var(--dark-color);
+  padding: 0.3rem 0.6rem;
+  transform-origin: 0 0;
+  transform: rotate(90deg);
+}
+
+.userName::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -1rem;
+  width: 20px;
+  height: 100%;
+  background: var(--dark-color);
+  transform: skewX(-12deg);
+  border-top-left-radius: 0.2rem;
+}
+
+.userName::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -1rem;
+  width: 20px;
+  height: 100%;
+  background: var(--dark-color);
+  transform: skewX(12deg);
+  border-top-right-radius: 0.2rem;
+}
+
+.bidBtnsBx {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.currentBidBx {
+  position: relative;
+  bottom: -0.2rem;
+  left: -0.6rem;
+  background: var(--dark-color);
+  color: #fff;
+  padding: 0.3rem 1rem;
+  border-top-right-radius: 0.46rem;
+  transform: skewX(25deg);
+}
+
+.btnBx{
+    background-image: linear-gradient(to bottom, var(--color-gradient-primary), var(--color-gradient-secondary));
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    border-radius: 0.2rem;
+    font-weight: 600;
+}
+
+.btnBx::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -0.8rem;
+    width: 20px;
+    height: 100%;
+    background-image: linear-gradient(to bottom, var(--color-gradient-primary), var(--color-gradient-secondary));
+    border-top-left-radius: 0.36rem;
+    border-bottom-left-radius: 0.36rem;
+    transform: skewX(18deg);
+}
+
+/* User Details styling */
+.userDetails .tabBx{
+    background-color: var(--dark-color);
+    display: flex;
+    width: max-content;
+    align-items: center;
+    padding: 0.6rem 1.5rem;
+    border-radius: 1.5rem;
+    gap: 1.3rem;
+    margin-bottom: 1.2rem;
+}
+
+.userDetails .tabBx p{
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.userDetails .tabBx p.active{
+    background-image: linear-gradient(to bottom, var(--color-gradient-primary), var(--color-gradient-secondary));
+    color: #000;
+    padding: 0.3rem 1rem;
+    border-radius: 1rem;
+}
+
+.userDetails .contentBx{
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.userDetails .contentBx .time{
+    color: var(--faint-color);
+}
+
+.userDetails .contentBx .mainHeading{
+    color: #fff;
+    font-size: 2.4rem;
+    line-height: 1.2;
+}
+
+.userDetails .contentBx .text{
+    color: var(--faint-color);
+}
+
+.userDetails .userAccountBx .leftBx .imgBx{
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.userDetails .userAccountBx .leftBx .imgBx img{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.userDetails .userAccountBx {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.userDetails .userAccountBx .leftBx{
+  display: flex;
+  gap: 1rem;
+}
+
+.userDetails .userAccountBx .leftBx .userInfo{
+  color: #fff;
+}
+
+.userDetails .userAccountBx .leftBx .userInfo p{
+  color:var(--faint-color);
+}
+
+.userDetails .userAccountBx .leftBx .userInfo h2{
+  font-size: 20px;
+}
+
+@media(max-width: 991px){
+  .nftCardContainer{
+    grid-template-columns: 1fr;
+  }
+}
